@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.TestException;
 
 public class SeleniumWrappers {
 	
@@ -92,6 +93,23 @@ public class SeleniumWrappers {
 		}catch(NoSuchElementException e) {
 			Log.error("Element not found in method <waitForElementToBeVisible> after 10 seconds");
 			Log.error(e.getMessage());
+		}
+	}
+	
+	/**
+	 * 
+	 * @param locator
+	 */
+	public WebElement getElement(By locator) {
+		Log.info("called method <getElement>");
+		waitForElementToBeVisible(driver.findElement(locator));
+		WebElement element ;
+		try {
+			element = driver.findElement(locator) ;
+			return element;
+		}catch (Exception e) {
+			Log.error(e.getMessage());
+			throw new TestException("Cannot find element on <getElement> ");
 		}
 	}
 	
