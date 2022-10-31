@@ -26,6 +26,7 @@ public class NavMenuPage extends SeleniumWrappers{
 	public By blogClassicLink = By.linkText("Classic");
 	public By aboutLink = By.linkText("ABOUT");
 	public By postFormatsBlogLink = By.linkText("Post Formats");
+	public By eventsLink = By.linkText("EVENTS");
 	
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchField = By.cssSelector("input[class='search_field']");
