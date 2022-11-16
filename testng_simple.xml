@@ -3,7 +3,7 @@
     <test name="Chrome" >
     	<parameter name = "browser" value = "chrome" />
         <classes>
-            <class name="tests.IFrameExample" ></class>
+            <class name="tests.FindBrokenLinks" ></class>
         </classes>
     </test>
 </suite>
