@@ -3,6 +3,7 @@ package tests;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import pages.ContactPage;
@@ -31,6 +32,10 @@ public class IFrameExample extends BaseTest{
 		EventsPage events = new EventsPage(driver);
 		events.click(events.festivalOfOldFilmsLink);
 		Thread.sleep(3000);
+		
+		Actions action = new Actions(driver);
+		action.scrollByAmount(0, 800).perform();
+		
 		SingleEventPage sePage = new SingleEventPage(driver);
 		sePage.clickMap();
 		Thread.sleep(3000);
