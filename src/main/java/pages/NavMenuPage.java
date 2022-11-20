@@ -31,6 +31,10 @@ public class NavMenuPage extends SeleniumWrappers{
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchField = By.cssSelector("input[class='search_field']");
 	
+	public By facebookButtonTop = By.cssSelector("div[class='top_panel_top_socials']>div>div>a[class*='facebook']");
+	public By twitterButtonTop = By.cssSelector("div[class='top_panel_top_socials']>div>div>a[class*='twitter']");
+	public By instagramButtonTop = By.cssSelector("div[class='top_panel_top_socials']>div>div>a[class*='instagram']");
+	
 	//Methods
 	public void navigateTo(By locator) {
 		

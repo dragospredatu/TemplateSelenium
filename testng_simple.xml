@@ -3,7 +3,7 @@
     <test name="Chrome" >
     	<parameter name = "browser" value = "chrome" />
         <classes>
-            <class name="tests.GalleryFormatTest" ></class>
+            <class name="tests.SocialMediaRedirectTest" ></class>
         </classes>
     </test>
 </suite>
